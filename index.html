@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NtateMohales Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+    (function () {
+        emailjs.init({
+            publicKey: "Ms5Xg-j6xz_NJS-am",
+        });
+    })();
+</script>
+</head>
+<body class="background-body">
+    <header>
+        <div class="logo">
+            <h1>NtateMohale</h1>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="button">
+            <button class="btn">
+                <a href="Mr Mohale's Resume (1).docx" download>Download resume</a>
+            </button>
+        </div>
+    </header>
+    <!-- Home section-->
+    <div class="home">
+        <div class="home-content">
+            <h3>Your Ease Is My Mission</h3>
+            <h1>Mohale Ntoa</h1>
+            <h2 id="loop">Network Engineer</h2>
+            <p>
+             I bring a unique combination of technical expertise, leadership experience, and a proven track record of solving critical problems. 
+             <br>In my previous role as a Site Supervisor, I successfully led a team that enhanced security protocols,<br> 
+             proactively identifying vulnerabilities and implementing solutions that improved overall system reliability.<br>
+             My experience collaborating with client and security management teams to address complex challenges has honed my ability to think <br>
+             strategically and deliver results. As a self-taught IT specialist with a quick learning ability, <br>
+             I am eager to apply my problem-solving skills and security-focused mindset to contribute to your team’s success.
+        </p>
+            <div class="button">
+                <button id="btn">Hire Me</button>
+            </div>
+        </div>
+        <div class="image">
+            <img src="images/Profile.jpg" alt="Profile.jpg"/>
+        </div>
+    </div>
+    <!-- About Section -->
+    <div class="about" id="about">
+        <!-- <h1 class="about">About</h1> -->
+        <div class="image">
+            <img src="images/Profile.jpg" alt="Profile.jpg"/>
+        </div>
+        <div class="about-content">
+            <h1>About</h1>
+            <h2>Technical Support</h2>
+            <P>I'm a self-taught Technical Support Specialist eager to bring my diverse skill set and <br>
+                passion for problem-solving to your IT team. While I may not have traditional hands-on experience in an enterprise environment,
+                <br>my journey has been built on a foundation of practical learning, determination, and a relentless pursuit of knowledge.</P>
+            <div class="button">
+                <button class="A-btn">Read More..</button>
+            </div>
+            <div class="social-media">
+                <li><a href="https://www.facebook.com/Ntate Ntoa Wa Mofokeng" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="https://www.tweeter.com/@ntoa_mohale" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="https://www.linkedin.com/Mohale Ntoa" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            </div>
+        </div>
+    </div>
+    <!-- Service Section -->
+    <div class="skills" id="skills">
+        <h1>Skills</h1>
+        <div class="main-skills">
+            <div class="card">
+                <li><a href="#"><i class="fa-solid fa-code"></i></a></li>
+                <h2>Web Development</h2>
+                <p>I'm driven by solving real-world problems and turning creative ideas into functional, scalable web solutions. <br>
+                    Whether it's building interactive features, optimizing performance, or ensuring seamless integration with third-party APIs, <br>
+                    I thrive on delivering high-quality, maintainable code that meets both business needs and user expectations.</p>
+                <button class="S-btn">More..</button>
+            </div>
+            <div class="card" id="three">
+                <li><a href="#"><i class="fa-solid fa-code"></i></a></li>
+                <h2>Cloud Services</h2>
+                <p>I'm passionate about streamlining cloud operations, reducing downtime, 
+                    and continuously improving infrastracture to keep up with growing business needs. 
+                    My approach is data-driven, focused on delivering high-quality, 
+                    efficient solutions tailored to your company's unique challenges.</p>
+                <button class="S-btn">More..</button>
+            </div>
+            <div class="card" id="three02">
+                <li><a href="#"><i class="fa-solid fa-code"></i></a></li>
+                <h2>SQL Database</h2>
+                <p>I'm highly detail-oriented, solution-driven, and always focused on improving data efficiency and system performance. 
+                    I'm eager to apply my expertise to help you streamline data processes, 
+                    enhance reporting, and ensure your databases run smoothly and efficiently.</p>
+                <button class="S-btn">More..</button>
+            </div>
+        </div>
+    </div>
+    <!-- Contact Section -->
+    <div class="contact" id="contact">
+        <h1>Contact</h1>
+        <div class="main-contact">
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" required>
+            
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            
+                <label for="message">Message:</label>
+                <textarea id="message" required></textarea>
+            
+                <button type="submit" onclick="sendMail()">Submit</button>
+            </form>
+        </div>
+    </div>
+<!-- <script src="script.js"></script> -->
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();  /* Prevent form from submitting the traditional way*/
+            
+            /* Gather form data*/
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            /*Send the email using EmailJS*/
+            emailjs.sendForm('service_ctk35vp', 'template_73g64y5', this)
+                .then(function(response) {
+                    alert('Your message has been sent successfully!');
+                    document.getElementById('contact-form').reset();  /*Optionally reset the form after submission*/
+                }, function(error) {
+                    alert('There was an error sending your message. Please try again later.');
+                });
+        });
+</script>
+    <!-- footer Section -->
+    <div class="footer">
+        <h3>Connecting networks, optimizing performance, empowering your business</h3>
+    </div>
+    
+</body>
+</html>
